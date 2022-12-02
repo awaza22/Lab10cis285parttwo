@@ -37,11 +37,47 @@ public class testSelectionSort {
 
     public void testMixed(){
 
+        int[] arr = new int[5];
+        arr[0] = 5;
+        arr[1] = -2;
+        arr[2] = 3;
+        arr[3] = 0;
+        arr[4] = -4;
+
+        int[] Sortedarr = new int[5];
+        Sortedarr[0] = -4;
+        Sortedarr[1] = -2;
+        Sortedarr[2] = 0;
+        Sortedarr[3] = 3;
+        Sortedarr[4] = 5;
+
         /** Test data contains with both positive, negative and zeros **/
+        SelectionSort x = new SelectionSort();
+        arr = x.basicSelectionSort(arr);
+
+        assertArrayEquals("Mixed Test Fails",Sortedarr,arr);
     }
 
     public void testDuplicates(){
 
+        int[] arr = new int[5];
+        arr[0] = 8;
+        arr[1] = 9;
+        arr[2] = 7;
+        arr[3] = 9;
+        arr[4] = 8;
+
+        int[] Sortedarr = new int[5];
+        Sortedarr[0] = 7;
+        Sortedarr[1] = 8;
+        Sortedarr[2] = 8;
+        Sortedarr[3] = 9;
+        Sortedarr[4] = 9;
+
         /** Test data contains duplicates **/
+        SelectionSort x = new SelectionSort();
+        arr = x.basicSelectionSort(arr);
+
+        assertArrayEquals("Duplicates Test Fails",Sortedarr,arr);
     }
 }
