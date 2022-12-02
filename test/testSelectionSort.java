@@ -11,7 +11,7 @@ public class testSelectionSort {
     }
     public testSelectionSort() {
     }
-
+    @Test
     public void testPositive(){
         int[] arr = new int[5];
         arr[0] = 8;
@@ -33,7 +33,7 @@ public class testSelectionSort {
 
         assertArrayEquals("Positive Test Fails", Sortedarr, arr);
     }
-
+    @Test
     public void testNegative(){
 
         /** Test data contains negative values only **/
@@ -57,7 +57,7 @@ public class testSelectionSort {
 
         assertArrayEquals("Negative Test Fails", Sortedarr, arr);
     }
-
+    @Test
     public void testMixed(){
 
         int[] arr = new int[5];
@@ -80,7 +80,7 @@ public class testSelectionSort {
 
         assertArrayEquals("Mixed Test Fails",Sortedarr,arr);
     }
-
+    @Test
     public void testDuplicates(){
 
         int[] arr = new int[5];
